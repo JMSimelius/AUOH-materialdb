@@ -45,8 +45,20 @@ const api_get_materials = (req, res, next) => {
 // UPDATE
 
 // DELETE
+// DELETE /api/material/5e877016446ff258bcc8d4bd
+const api_delete_material = (req, res, next) => {
+    let id = req.params.id;
+    material_model.findByIdAndRemove(id).then(() =>{
+        res.send();
+    }).catch(err => {
+        res.status(500);
+        res.send(err.errmsg);
+        console.log(err);
+    });
+};
 
 
 // EXPORTS
 module.exports.api_get_materials = api_get_materials;
 module.exports.api_post_material = api_post_material;
+module.exports.api_delete_material = api_delete_material;

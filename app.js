@@ -35,6 +35,7 @@ app.get("/api/materials", material_controller.api_get_materials);
 // UPDATE
 
 // DELETE
+app.delete("/api/material/:id", material_controller.api_delete_material);
 
 const database_uri = "mongodb+srv://server:0nq9DRRFOyM7rymp@cluster0-hy4nf.mongodb.net/materialdb?retryWrites=true&w=majority";
 
