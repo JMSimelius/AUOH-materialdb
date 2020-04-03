@@ -36,7 +36,7 @@ app.get("/api/materials", material_controller.api_get_materials);
 
 // DELETE
 
-const database_uri = "mongodb+srv://server:0nq9DRRFOyM7rymp@cluster0-hy4nf.mongodb.net/test?retryWrites=true&w=majority";
+const database_uri = "mongodb+srv://server:0nq9DRRFOyM7rymp@cluster0-hy4nf.mongodb.net/materialdb?retryWrites=true&w=majority";
 
 mongoose.connect(database_uri, {
     useCreateIndex: true,
